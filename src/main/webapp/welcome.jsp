@@ -18,7 +18,7 @@
 	
 	%>
 	
-	Welcome ${username}
+	Welcome ${username} to this project
 	
 	<br>
 	<a href="videos.jsp">Videos here</a>
