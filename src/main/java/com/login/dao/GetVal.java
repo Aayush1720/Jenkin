@@ -5,30 +5,33 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class LoginDao {
-	String sql = "select * from student where Employee_ID_Number=? and pass=?";
+public class GetVal {
+	String sql = "select * from student where Employee_ID_Number=?";
 	String url = "jdbc:mysql://localhost:3306/student";
 	String u = "root";
 	String p = "Aayush@123";
 	
-	public boolean check(String uname, String pword) {
+	public String value(String id)
+	{
+		String ans = "";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url, u, p);
 			PreparedStatement st = con.prepareStatement(sql);
-			st.setString(1, uname);
-			st.setString(2, pword);
+			st.setString(1, id);
 			ResultSet rs = st.executeQuery();
-			if(rs.next()) {
-				return true;
+			for(int i =1;i<5;i++)
+			{
+				String temp = rs.getString(i);
+				ans = ans.concat(temp +  " ");
+				
 			}
 			
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
-		
-		
-		return false;
+		return ans;
 	}
+	
 }

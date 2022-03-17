@@ -7,16 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");	
-		response.setHeader("Pragma", "no-cache");
-		response.setHeader("Expires", "0");
-		
-		if(session.getAttribute("username")==null){
-			response.sendRedirect("login.jsp");
-		}
 	
-	%>
 	
 <h3>
 			All Employees Details
@@ -33,31 +24,31 @@
 			  </tr>
 			  <tr>
 			    <td>1</td>
-			    <td>Saurav</td>
-			    <td>Singh</td>
-			    <td>01/01/2001</td>
-			    <td>987654321</td>
+			    <td>aayush</td>
+			    <td>choubey</td>
+			    <td>17/08/2000</td>
+			    <td>9893660097</td>
 			  </tr>
 			  <tr>
 			    <td>2</td>
-			    <td>qwerty</td>
-			    <td>uiop</td>
-			    <td>12/12/2000</td>
-			    <td>9876512340</td>
-			  </tr>
-			  <tr>
-			    <td>10</td>
-			    <td>ten</td>
-			    <td>ten</td>
-			    <td>12/12/2000</td>
-			    <td>1010101010</td>
+			    <td>n1</td>
+			    <td>l1</td>
+			    <td>17/08/2000</td>
+			    <td>9893660097</td>
 			  </tr>
 			  <tr>
 			    <td>3</td>
-			    <td>asdfg</td>
-			    <td>hjkl</td>
-			    <td>12/12/2000</td>
-			    <td>23456798765</td>
+			    <td>n2</td>
+			    <td>n2</td>
+			    <td>17/08/2000</td>
+			    <td>9893660097</td>
+			  </tr>
+			  <tr>
+			    <td>4</td>
+			    <td>n3</td>
+			    <td>n4</td>
+			    <td>17/08/2000</td>
+			    <td>9893660097</td>
 			  </tr>
 			</table>
 		</center>
@@ -81,10 +72,10 @@
 			  </tr>
 			  <tr>
 			    <td>1</td>
-			    <td>Saurav</td>
-			    <td>Singh</td>
-			    <td>01/01/2001</td>
-			    <td>987654321</td>
+			    <td>Aayush</td>
+			    <td>Choubey</td>
+			    <td>17/08/2000</td>
+			    <td>9893660097</td>
 			    <td>sde</td>
 			    <td>200000</td>
 			    <td>500000</td>

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.login.dao.LoginDao;
+import com.login.dao.GetVal;
+
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
@@ -17,12 +19,14 @@ public class Login extends HttpServlet {
 		String pword=request.getParameter("pword");
 		System.out.println(uname + pword);
 		LoginDao dao = new LoginDao();
-		
+		GetVal val = new GetVal();
+		String allDetail =val.value(uname);
 		//response.sendRedirect("welcome.jsp");
 		
 		if(dao.check(uname, pword)) {
 			HttpSession session = request.getSession();
-			session.setAttribute("username", uname);
+
+			session.setAttribute("details", allDetail);
 			response.sendRedirect("welcome.jsp");
 		}
 		else {
